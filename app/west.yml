@@ -4,19 +4,15 @@ manifest:
   remotes:
     - name: zephyr-app
       url-base: https://github.com/motus-engineering/zephyr-app
-    - name: zephyrproject-rtos
-      url-base: https://github.com/zephyrproject-rtos
+    - name: ncs
+      url-base: https://github.com/nrfconnect
 
   projects:
-    - name: zephyr
-      remote: zephyrproject-rtos
-      revision: v3.5.0
-      west-commands: scripts/west-commands.yml
-      import:
-        name-allowlist:
-          - cmsis
-          - hal_stm32
-      clone-depth: 1
+    - name: nrf
+      remote: ncs
+      repo-path: sdk-nrf
+      revision: main
+      import: true
 
   self:
     west-commands: scripts/west-commands.yml
