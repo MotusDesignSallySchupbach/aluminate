@@ -77,6 +77,9 @@ modules/
 tools/
 zephyr/
 
+#NRFConnect
+test/
+
 # Twister
 twister-out*/
 
